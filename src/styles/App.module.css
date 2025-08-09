@@ -1,0 +1,89 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.container.dark {
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container.dark .title {
+  color: white;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.chart {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.container.dark .chart {
+  background: rgba(50, 50, 50, 0.9);
+  color: white;
+}
+
+.chart:hover {
+  transform: translateY(-5px);
+}
+
+.chartTitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.container.dark .chartTitle {
+  color: white;
+}
+
+.axis {
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #333;
+  shape-rendering: crispEdges;
+}
+
+.container.dark .axis path,
+.container.dark .axis line {
+  stroke: #ccc;
+}
+
+.container.dark .axis text {
+  fill: #ccc;
+}
