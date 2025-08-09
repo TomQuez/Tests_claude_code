@@ -21,12 +21,20 @@ body {
   color: white;
 }
 
-.title {
-  text-align: center;
-  color: #333;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 30px;
+  gap: 20px;
+}
+
+.title {
+  color: #333;
+  margin: 0;
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
 .container.dark .title {
@@ -86,4 +94,18 @@ body {
 
 .container.dark .axis text {
   fill: #ccc;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .title {
+    font-size: 2em;
+    text-align: center;
+  }
 }

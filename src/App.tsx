@@ -6,6 +6,7 @@ import { PieChart } from './components/charts/PieChart';
 import { LineChart } from './components/charts/LineChart';
 import { Controls } from './components/ui/Controls';
 import { Tooltip } from './components/ui/Tooltip';
+import { Calculator } from './components/ui/Calculator';
 import styles from './styles/App.module.css';
 
 function App() {
@@ -37,7 +38,10 @@ function App() {
 
   return (
     <div className={`${styles.container} ${isDarkTheme ? styles.dark : ''}`}>
-      <h1 className={styles.title}>🚀 Interactive Data Dashboard</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>🚀 Interactive Data Dashboard</h1>
+        <Calculator />
+      </div>
       
       <Controls
         onGenerateData={updateData}
